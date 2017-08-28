@@ -32,7 +32,7 @@ class Corpus:
         self._min_absolute_frequency = min_absolute_frequency
 
         self.max_features = max_features
-        self.data_frame = pandas.read_csv(source_file_path, sep='\t', encoding='utf-8')
+        self.data_frame = pandas.read_csv(source_file_path, sep=',', encoding='utf-8')
         if sample:
             self.data_frame = self.data_frame.sample(frac=0.8)
         self.data_frame.fillna(' ')
